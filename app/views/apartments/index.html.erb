@@ -1,0 +1,14 @@
+<h1>Hello Paxsafers</h1>
+<% @apartments.each do |apartment| %>
+	<%= apartment.name %><br />
+	<%= apartment.rate %><br />
+	<%= apartment.address %><br />
+	<%= apartment.description %><br /><br /><br />
+<% end %>
+<%= simple_form_for Apartment.new do |f| %>
+  <%= f.input :name %>
+  <%= f.input :rate %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.submit 'Submit' %>
+<% end %>

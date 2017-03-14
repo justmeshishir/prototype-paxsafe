@@ -1,0 +1,8 @@
+<%= simple_form_for @apartment,method: :patch do |f| %>
+  <%= f.input :name %>
+  <%= f.input :rate %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.submit 'Submit' %>
+  <%= link_to 'Edit', edit_apartment(apartment) %> 
+<% end %>
