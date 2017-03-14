@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313151456) do
+ActiveRecord::Schema.define(version: 20170314142215) do
 
   create_table "apartments", force: :cascade do |t|
     t.string   "name"
     t.integer  "rate"
     t.string   "address"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "access_token"
   end
 
 end
