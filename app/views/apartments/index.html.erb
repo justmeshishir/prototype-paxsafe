@@ -8,8 +8,8 @@
 <%= simple_form_for Apartment.new do |f| %>
   <%= f.input :name %>
   <%= f.input :rate %>
-  <%= f.input :address %>
-  <%= f.input :description %>
+  <%= f.input :address, id: 'address'%>
+  <%= f.input :description  %>
   <%= f.input :access_token %>
-  <%= f.submit 'Submit' %>
+  <%= f.submit 'Submit', id: 'submit_apartments' %>
 <% end %>
