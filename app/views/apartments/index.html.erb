@@ -1,11 +1,5 @@
-<h1>Hello Paxsafers</h1>
-<% @apartments.each do |apartment| %>
-	<%= apartment.name %><br />
-	<%= apartment.rate %><br />
-	<%= apartment.address %><br />
-	<%= apartment.description %><br /><br /><br />
-<% end %>
-<%= simple_form_for Apartment.new do |f| %>
+<%= render partial: 'data' %>
+<%= simple_form_for Apartment.new, multipart: true, remote: true do |f| %>
   <%= f.input :name %>
   <%= f.input :rate %>
   <%= f.input :address, id: 'address'%>
